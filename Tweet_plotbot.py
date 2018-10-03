@@ -1,10 +1,3 @@
-
-# coding: utf-8
-
-# In[3]:
-
-
-# Dependencies
 import tweepy
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -13,27 +6,13 @@ import matplotlib.pyplot as plt
 #from matplotlib import style
 #style.use('ggplot')
 
-
-
 import time
 #import json
 import requests as req
 from datetime import datetime
 
-
-# In[4]:
-
-
 # Twitter API Keys
 # import consumer_key, consumer_secret, access_token, access_token_secret
-# consumer_key = "HUIAGvvNQHFVCfgrxPf5bTGF7"
-# consumer_secret = "cSTRKvgkocxdt6kS3hVfJwaYjuNEfVPFPaNqJcUphbM7jDHQxu"
-# access_token = "2690064128-wcSMl9vVnZMDz7d6lTNjUhJaoFwaIanqPUrJdbl"
-# access_token_secret = "8q5J11E0byn1iFamGwWiwplnZNWPFvGDWhc4M7h36MCwY"
-
-
-# In[5]:
-
 
 consumer_key = os.environ.get("consumer_key")
 consumer_secret = os.environ.get("consumer_secret")
@@ -44,18 +23,9 @@ access_token_secret = os.environ.get("access_token_secret")
 # print(access_token)
 # print(access_token_secret)
 
-
-# In[6]:
-
-
-
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
-
-
-# In[118]:
-
 
 # create function that does the sentiment analysis
 target_account_set = set([])
@@ -148,12 +118,6 @@ def TweetBot():
         print("nothing found")
 
         
-
-
-
-# In[121]:
-
-
 # let the bot run 100 times, waiting 5 min between each time
 counter = 0
 while(counter < 100):
