@@ -10,13 +10,13 @@ import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 analyzer = SentimentIntensityAnalyzer() 
 import matplotlib.pyplot as plt
-from matplotlib import style
-style.use('ggplot')
+#from matplotlib import style
+#style.use('ggplot')
 
 
 
 import time
-import json
+#import json
 import requests as req
 from datetime import datetime
 
