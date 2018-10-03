@@ -110,4 +110,3 @@ ENV/
 node_modules/
 
 *.pdf
-*.txt
