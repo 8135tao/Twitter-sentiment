@@ -107,7 +107,7 @@ def TweetBot():
             
             fig.savefig(f"sentiment_analysis.png")
             
-            #api.update_with_media("sentiment_analysis.png", f"Sentiment analysis for {target_account} (thx @{helper}!)" )
+            api.update_with_media("sentiment_analysis.png", f"Sentiment analysis for {target_account} (thx @{helper}!)" )
             #api.update_status(f"Thank you! @{helper}")
             
 
