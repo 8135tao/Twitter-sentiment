@@ -2,10 +2,14 @@ import tweepy
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 analyzer = SentimentIntensityAnalyzer() 
+
+import matplotlib
+matplotlib.use('Agg')
+
 import matplotlib.pyplot as plt
-from matplotlib import style
+#from matplotlib import style
 #style.use('ggplot')
-plt.use('Agg')
+#plt.use('Agg')
 
 import os
 import time
