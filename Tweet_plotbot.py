@@ -5,6 +5,7 @@ analyzer = SentimentIntensityAnalyzer()
 import matplotlib.pyplot as plt
 #from matplotlib import style
 #style.use('ggplot')
+plt.use('Agg')
 
 import time
 #import json
