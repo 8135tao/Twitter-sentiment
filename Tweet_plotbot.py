@@ -2,10 +2,11 @@ import tweepy
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 analyzer = SentimentIntensityAnalyzer() 
-#import matplotlib.pyplot as plt
-#from matplotlib import style
+import matplotlib.pyplot as plt
+from matplotlib import style
 #style.use('ggplot')
-#plt.use('Agg')
+plt.use('Agg')
+
 import os
 import time
 #import json
@@ -80,35 +81,35 @@ def TweetBot():
             
             sentiments_pd = pd.DataFrame(sentiments)
             
-#             legend_list =[]
+            legend_list =[]
 
-#             fig, ax = plt.subplots(1,1,figsize=(10,6))
+            fig, ax = plt.subplots(1,1,figsize=(10,6))
             
-#             x_vals = sentiments_pd["Tweets Ago"]
-#             y_vals = sentiments_pd["Compound"]
-#             #plt.plot(x_vals, y_vals, linewidth=1, marker='o', color='r')
-#             leg, = plt.plot(x_vals, y_vals, linewidth=1, marker='o', color='r')
-#             legend_list.append(leg)
+            x_vals = sentiments_pd["Tweets Ago"]
+            y_vals = sentiments_pd["Compound"]
+            #plt.plot(x_vals, y_vals, linewidth=1, marker='o', color='r')
+            leg, = plt.plot(x_vals, y_vals, linewidth=1, marker='o', color='r')
+            legend_list.append(leg)
     
             
             
             # # Incorporate the other graph properties
-#             now = datetime.now()
-#             now = now.strftime("%Y-%m-%d %H:%M")
-#             plt.title(f"Sentiment Analysis of Tweets ({now}) for {target_account}")
-#             plt.xlim([x_vals.max(),x_vals.min()]) 
-#             plt.ylabel("Tweet Polarity")
-#             plt.xlabel("Tweets Ago")
+            now = datetime.now()
+            now = now.strftime("%Y-%m-%d %H:%M")
+            plt.title(f"Sentiment Analysis of Tweets ({now}) for {target_account}")
+            plt.xlim([x_vals.max(),x_vals.min()]) 
+            plt.ylabel("Tweet Polarity")
+            plt.xlabel("Tweets Ago")
             
-#             legen = plt.legend(handles = legend_list)
-#             legen.get_texts()[0].set_text('sentiment of tweets for '+target_account)
+            legen = plt.legend(handles = legend_list)
+            legen.get_texts()[0].set_text('sentiment of tweets for '+target_account)
 
-#             plt.show()
+            plt.show()
             
             
-#             fig.savefig(f"sentiment_analysis.png")
+            fig.savefig(f"sentiment_analysis.png")
             
-#             api.update_with_media("sentiment_analysis.png", f"Sentiment analysis for {target_account} (thx @{helper}!)" )
+            api.update_with_media("sentiment_analysis.png", f"Sentiment analysis for {target_account} (thx @{helper}!)" )
 #             #api.update_status(f"Thank you! @{helper}")
             
 
